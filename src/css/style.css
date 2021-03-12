@@ -5,7 +5,6 @@ main {
   height: 50vh;
 }
 main #game-board {
-  background-color: rgba(1, 65, 148, 0.815);
   position: relative;
   top: 50%;
   border: 1px solid rgba(229, 249, 250, 0.897);
@@ -25,7 +24,7 @@ main #game-board {
 }
 
 body {
-  background-color: #0052bd;
+  background-color: #00447a;
 }
 
 .title {
