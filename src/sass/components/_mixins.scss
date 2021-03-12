@@ -1,0 +1,11 @@
+@use "../abstract/" as *;
+
+
+@mixin flex-display (
+    $justify-content: center,
+    $align-items: center,
+) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
