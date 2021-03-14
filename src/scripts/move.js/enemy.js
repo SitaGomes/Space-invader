@@ -1,24 +1,29 @@
-import { g } from '../main.js'
-
-class enemy {
-    constructor(x, y, width) {
-        this.x = x
-        this.y = y
+export default class enemy {
+    constructor(width, color, gameWidth, gameHeight) {
+        this.gameWidth = gameWidth
+        this.gameHeight = gameHeight
         this.width = width
+        this.color = color
         this.speed = 2
+        this.x = Math.random() * (gameWidth - (width + 20)) + (width + 20); //*To be $ pixels away from the border
+        this.y = (gameHeight - gameHeight) - width //* Putting the Y to 0 
+        this.time = Date.now()
+        this.spawnRate = 1500
+        this.lastSpawn = 0
     }
 
 
-    draw() {
-        g.strokeStyle = "white"
-        g.fillStyle = "white"
-        g.arc(this.x, this.y, this.width, 0, 2 * Math.PI)
+    draw(ctx) {
 
+        ctx.beginPath()
+        ctx.fillStyle = this.color
+        ctx.arc(this.x, this.y, this.width, 0, 2 * Math.PI)
+        ctx.fill()
     }
 
-    movement() {
+    move() {
         this.y += this.speed
     }
+
 }
 
-export { enemy }
