@@ -1,5 +1,5 @@
 @use "../abstract/" as *;
-@use "./mixins" as *;
+
 
 main{
     @include flex-display();
@@ -13,8 +13,8 @@ main{
     }
 }
 
-
-@media only screen and (max-width: 400px){
+//? 400px
+@media only screen and (max-width: 25rem){
 
     main{        
         #game-board{

@@ -1,4 +1,5 @@
-@use "../abstract/" as *;
+@use "./colors";
+@use "./fonts";
 
 
 @mixin flex-display (
